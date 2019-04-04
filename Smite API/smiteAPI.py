@@ -11,8 +11,8 @@ cache = TTLCache(maxsize=30, ttl=300)
 # For legal reasons, auth_key and dev_id left blank for
 # user to fill in.
 url = 'http://api.smitegame.com/smiteapi.svc/'
-dev_id = #Please fill in
-auth_key = #Please fill in
+dev_id = # Fill in with your own ID
+auth_key = # Fill in with your authentication key
 
 # Creating a new session to call requests
 s = requests.session()
@@ -83,12 +83,12 @@ def main(s):
     newSession = sessionRequest('createsession', s)
     sessionDict = json.loads(newSession.text)
     sessionID = sessionDict['session_id']
-    done = "Y"
-    while done == "Y":
+    done = "y"
+    while done == "y":
         playerName = input('\nPlayer Name: ').lower()
         playerInfo = createPlayerInf(sessionID, s, playerName)
         print(playerInfo)
-        done = input('Would you like to search for another player? Y/N: ')
+        done = input('Would you like to search for another player? Y/N: ').lower()
 
 
 # Running the main function with the created session.

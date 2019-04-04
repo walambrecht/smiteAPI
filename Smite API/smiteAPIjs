@@ -1,1 +1,12 @@
-<script src="https://d3js.org/d3.v5.min.js"></script>
+// Session information (left blank for legal reasons)
+var url = 'http://api.smitegame.com/smiteapi.svc/'
+var id = //Fill in with your id
+var auth_key = //Fill in with your authentication key
+
+// Generate a signature:
+
+// New Session request
+var request = new XMLHttpRequest()
+
+// Open a new connection
+request.open('GET', /*REQUIRES MD5 HASHED URL WITH SESSION REQUESTS*/)
