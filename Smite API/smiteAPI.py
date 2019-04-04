@@ -11,8 +11,8 @@ cache = TTLCache(maxsize=30, ttl=300)
 # For legal reasons, auth_key and dev_id left blank for
 # user to fill in.
 url = 'http://api.smitegame.com/smiteapi.svc/'
-dev_id =
-auth_key =
+dev_id = #Please fill in
+auth_key = #Please fill in
 
 # Creating a new session to call requests
 s = requests.session()
